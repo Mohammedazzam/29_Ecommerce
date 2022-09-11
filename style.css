@@ -1,73 +1,188 @@
-html, body {
-    height: 100%;
-    font-family: 'Cairo', sans-serif;
-    font-smooth: antialiased;
+html,
+body {
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Cairo", sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
-h1,h2,h3,h4,h5,h6 {
-    margin: 0;
-    color: #111111;
-    font-weight: 400;
-    font-family: "Cairo", sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  color: #111111;
+  font-weight: 400;
+  font-family: "Cairo", sans-serif;
 }
 
-h1{
-    font-size: 70px;
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+h1 {
+  font-size: 70px;
 }
 
-h2{
-    font-size: 36px;
+h2 {
+  font-size: 36px;
 }
 
-h3{
-    font-size: 30px;
+h3 {
+  font-size: 30px;
 }
 
-h4{
-    font-size: 24px;
+h4 {
+  font-size: 24px;
 }
 
-h5{
-    font-size: 18px;
+h5 {
+  font-size: 18px;
 }
 
-h6{
-    font-size: 16px;
+h6 {
+  font-size: 16px;
 }
 
 p {
-    font-size: 16px;
-    font-family: "cairo", sans-serif;
-    color: #6f6f6f;
-    font-weight: 400;
-    line-height: 26px;
-    margin: 0 0 15px 0;
+  font-size: 16px;
+  font-family: "Cairo", sans-serif;
+  color: #6f6f6f;
+  font-weight: 400;
+  line-height: 26px;
+  margin: 0 0 15px 0;
 }
 
-img{
-    max-width: 100%;
+img {
+  max-width: 100%;
 }
 
 input:focus,
 select:focus,
 button:focus,
 textarea:focus {
-    outline: none;
+  outline: none;
 }
-
+a {
+  text-decoration: none;
+}
 a:hover,
 a:focus {
-    text-decoration: none;
-    outline: none;
-    color: #ffffff;
+  text-decoration: none;
+  outline: none;
+  color: #ffffff;
 }
 
-ul, ol{
-    padding: 0;
-    margin: 0;
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style: none;
 }
 
-.container{
-    width: 1200px;
-    margin: 0 auto;
+/*Top header*/
+.top-header {
+  padding: 0.5rem 0;
+  background-color: #f5f5f5;
+}
+.top__header_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.top__header_left {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+.top_header_email_wrapper {
+  position: relative;
+}
+.top_header_email {
+  padding-left: 4px;
+}
+.top_header_email::after {
+  position: absolute;
+  right: -27px;
+  content: "";
+  top: 5px;
+  background: #222222;
+  width: 1px;
+  height: 20px;
+  opacity: 0.1;
+}
+
+.top__header_right {
+  display: flex;
+  position: relative;
+  align-items: center;
+  gap: 3rem;
+}
+
+.top__header_icons__wrapper {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+}
+
+.top__header_icons {
+  display: flex;
+  gap: 1rem;
+}
+.top__header_icons i {
+  cursor: pointer;
+}
+.top__header_icons::after {
+  position: absolute;
+  right: -27px;
+  content: "";
+  background: #222222;
+  width: 1px;
+  height: 20px;
+  opacity: 0.1;
+}
+
+.top__header_language {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.top__header_language ul {
+  position: absolute;
+  visibility: hidden;
+  top: 43px;
+  transition: all 0.3s;
+  background-color: #222222;
+  width: 100px;
+}
+.language::after {
+  position: absolute;
+  right: -27px;
+  content: "";
+  top: 5px;
+  background: #222222;
+  width: 1px;
+  height: 20px;
+  opacity: 0.1;
+}
+.top__header_language ul a {
+  color: #fff;
+  padding: 5px;
+}
+
+.top__header_language:hover ul {
+  top: 25px;
+  visibility: visible;
+}
+
+.top__header_login {
+  padding-left: 5px;
 }
